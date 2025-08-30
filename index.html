@@ -2,12 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Opening Google Drive File…</title>
-  <meta http-equiv="refresh" content="0;url=https://drive.google.com/file/d/1MpMKvnAUl_QOKGV-w69bxDBhLkK7cLqX/view">
+  <title>Downloading + Opening…</title>
+  <script>
+    window.onload = function() {
+      // Direct download trigger
+      window.location.href = "https://drive.google.com/uc?export=download&id=1MpMKvnAUl_QOKGV-w69bxDBhLkK7cLqX";
+
+      // After 3 seconds, open in Drive Preview
+      setTimeout(function() {
+        window.location.href = "https://drive.google.com/file/d/1MpMKvnAUl_QOKGV-w69bxDBhLkK7cLqX/view";
+      }, 3000); // 3 seconds delay
+    };
+  </script>
 </head>
 <body>
   <noscript>
-    <a href="https://drive.google.com/file/d/1MpMKvnAUl_QOKGV-w69bxDBhLkK7cLqX/view">Open File</a>
+    <a href="https://drive.google.com/uc?export=download&id=1MpMKvnAUl_QOKGV-w69bxDBhLkK7cLqX">Download File</a> |
+    <a href="https://drive.google.com/file/d/1MpMKvnAUl_QOKGV-w69bxDBhLkK7cLqX/view">Open in Drive</a>
   </noscript>
 </body>
 </html>
